@@ -26,7 +26,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure--w)+04d6y)(@jzk=%69jyp!oq0$evo%5*ltjbs0#!q(6sb3u-i'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -82,10 +82,12 @@ WSGI_APPLICATION = 'tugasmagang1.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': BASE_DIR / 'db.postgresql',
     }
 }
+
+DATABASES['default']=dj_database_url.parse('postgres://wooqneesjycoiz:b00fd5c4c534cda86ea423d5bd349b2f537fc9abfaea809e5c75879cba18c133@ec2-54-158-232-223.compute-1.amazonaws.com:5432/d2f78q8ja769ti',conn_max_age=600)
 
 
 # Password validation
