@@ -4,8 +4,8 @@ from django.shortcuts import render
 
 def KalkulatorKesehatan(request):
     context={
-        'judul':'profil'
+        'judul':'kalkulator kesehatan'
     }
-    return render(request,'profil.html',context)
+    return render(request,'kalkulator.html',context)
 
 # Janlup diganti
